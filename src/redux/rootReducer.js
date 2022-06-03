@@ -1,7 +1,8 @@
 
 export const rootReducer = (state = {town: 'Санкт-Петербург'}, action) => {
+    console.log(action);
     switch (action.type) {
-        case 'setTown':
+        case 'SET_TOWN':
             state.town = action.town;
             return state;
 

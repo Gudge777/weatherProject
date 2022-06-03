@@ -4,9 +4,10 @@ import {useDispatch, useSelector} from "react-redux";
 
 const Header = () => {
     const town = useSelector(state => state.town);
+    const dispatch = useDispatch();
+
     const setTown = (town) => {
-        const dispatch = useDispatch();
-        dispatch ({type: 'setTown', town: town});
+        dispatch ({type: 'SET_TOWN', town: town});
     }
 
     return (
