@@ -1,14 +1,11 @@
 import React from 'react';
-import classes from './MainContext.module.css'
+import classes from './MainContext.module.css';
+import {DateBlock} from "./DateBlock/DateBlock";
 
 const MainContext = () => {
-    const town = 'Санкт-Петербург';
-    const chosenDate = 'сейчас';
-
     return (
         <div className={classes.mainContext}>
-            <p className={classes.status}>Погода в городе {town} {chosenDate}</p>
-
+            <DateBlock date={'сейчас'}/>
         </div>
     )
 }

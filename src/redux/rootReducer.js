@@ -1,10 +1,10 @@
+const defaultState = {town: 'Санкт-Петербург', chosenDate: 'сегодня'};
 
-export const rootReducer = (state = {town: 'Санкт-Петербург'}, action) => {
-    console.log(action);
+export const rootReducer = (state = defaultState, action) => {
     switch (action.type) {
+
         case 'SET_TOWN':
-            state.town = action.town;
-            return state;
+            return {...state, town: action.town};
 
         default:
             return state;
